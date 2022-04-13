@@ -35,6 +35,7 @@ const PaymentForm = () => {
       method: "post",
       header: {
         "Content-Type": "application/json",
+        "Accept": "application/json",
       },
       body: JSON.stringify({ amount: amount * 100 }),
     }).then((res) => res.json());
