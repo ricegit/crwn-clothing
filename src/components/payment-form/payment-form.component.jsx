@@ -38,7 +38,10 @@ const PaymentForm = () => {
         "Accept": "application/json",
       },
       body: JSON.stringify({ amount: amount * 100 }),
-    }).then((res) => res.json());
+    }).then((res) => {
+      console.log("response", res)
+      return res.json()
+    });
 
     const {
       paymentIntent: { client_secret },
